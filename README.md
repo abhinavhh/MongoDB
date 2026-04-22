@@ -34,3 +34,17 @@ Understanding the core building blocks of a MongoDB database.
 *   **Collections**: Instead of strictly typed tables, we use collections.
 *   **Documents**: Records are stored as flexible documents (BSON) rather than fixed rows.
 *   **Dynamic Schema**: Unlike SQL, documents in the same collection don't need to have the same fields.
+
+Simple Example:
+
+***Student Details***
+
+```{
+    "name": "Rahul",
+    "age": 23,
+    "skills": ["React", "MongoDB"],
+    "address": {
+        "pincode": 670691,
+        "location": Kerala
+    }
+}```
