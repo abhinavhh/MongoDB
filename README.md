@@ -39,7 +39,8 @@ Simple Example:
 
 ***Student Details***
 
-```{
+```
+{
     "name": "Rahul",
     "age": 23,
     "skills": ["React", "MongoDB"],
