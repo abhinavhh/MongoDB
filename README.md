@@ -47,4 +47,5 @@ Simple Example:
         "pincode": 670691,
         "location": Kerala
     }
-}```
+}
+```
