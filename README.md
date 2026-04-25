@@ -103,4 +103,42 @@ db.users.createIndex(
   { unique: true }
 )
 ```
+### Lesson 05 READ DATA
+
+* **find()**: return multiple matching documents. db.users.find()
+* **findOne()**: return single matching document. db.users.findOne({email: "test@gmail.com"})
+* **Filtering**: only age 24 users. db.users.find({ age: 24 })
+* **Projection**: Return only name or email. db.users.find({}, { name: 1, email: 1, _id: 0})
+
+### Lesson 06 UPDATE DATA
+
+* **updateOne()**: Update first matching document.
+```
+db.users.updateOne(
+    {name: "Arun"},
+    { $set: {age: 21}}
+)
+```
+* **updateMany()**: Update all matching documents.
+```
+db.users.updateMany(
+  {type:"Cardio"},
+  {$set: {time: 30}}
+)
+```
+* **Increment Values**: Increment values using $inc
+```
+db.products.updateOne(
+  {name: "Laptop"},
+  {$inc: {stock: -1}}
+)
+```
+* **Atomic update**: Checks for update, Only reduce if stock > 0.
+```
+db.products.updateOne(
+  {_id: 1, stock: {$gt: 0}},
+  {$inc: {stock: -1}}
+)
+```
+
 
